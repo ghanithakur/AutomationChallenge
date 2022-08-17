@@ -28,8 +28,14 @@ public class AlertPage extends PageObjects {
 	public void clickButton() {
 		driver.switchTo().frame(iFrame);
 		this.buttonForAlert.click();
-		driver.switchTo().alert().accept();
 		
+	}
+	
+	public String getAlertText() {
+	
+		String text =  driver.switchTo().alert().getText().toString();
+		driver.switchTo().alert().accept();
+		return text;
 	}
 	
 }

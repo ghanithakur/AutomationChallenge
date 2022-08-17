@@ -15,9 +15,9 @@ public class AlertPageTest extends FunctionalTests {
 		AlertPage alertPage = new AlertPage(driver);
 		
 		alertPage.clickButton();
-						
-				
 		
+		assertEquals(alertPage.getAlertText().trim(), "I am an alert box!");
+							
 	}
 
 }
